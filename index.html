@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Api-Documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="ticlekiwi">
+
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/hightlightjs-dark.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300&family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style.css" media="all">
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body>
+<div class="left-menu">
+    <div class="content-logo">
+        <div class="logo">
+            <img alt="platform by Emily van den Heever from the Noun Project" title="platform by Emily van den Heever from the Noun Project" src="images/logobudaya.png" height="75" />
+            </br>
+            <span>Budaya Sul-Sel</span>
+        </div>
+        <button class="burger-menu-icon" id="button-menu-mobile">
+            <svg width="34" height="34" viewBox="0 0 100 100"><path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"></path><path class="line line2" d="M 20,50 H 80"></path><path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"></path></svg>
+        </button>
+    </div>
+    <div class="mobile-menu-closer"></div>
+    <div class="content-menu">
+        <ul>
+            <li>
+                <a style="text-decoration:none" href="login.php">LOGIN</a>
+            </li>
+            <li class="scroll-to-link active" data-target="content-get-started">
+                <a>GET STARTED</a>
+            </li>
+            <li class="scroll-to-link " data-target="content-get-onedata">
+                <a>SEARCH DATA</a>
+            </li>
+            <li class="scroll-to-link" data-target="content-get-alldata">
+                <a>GET ALL DATA</a>
+            </li>
+            <li class="scroll-to-link" data-target="content-errors">
+                <a>CODE</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="content-page">
+    <div class="content-code"></div>
+    <div class="content">
+      <div class="overflow-hidden content-section" id="content-get-started">
+            <h1>Get started</h1>
+            <pre>
+            </pre>
+            <p>
+                To use this API, you need an <strong>API key</strong>. Please <strong><a href="login.php">Login</a></strong> to get your own API key.
+            </p>
+        </div>
+        <div class="overflow-hidden content-section" id="content-get-onedata">
+            <h2>SEARCH DATA</h2>
+            <pre><code class="bash">
+# Get one data using parameters q and cat. For example, q=b and cat=tari. Here's the result for respond.
+{
+tari{
+    "status": {
+        "code": 200,
+        "decription": "Request Valid"
+    },
+    "results": [
+        {
+            "id_tari": "13",
+            "nama_tari": "Tari Ma Badong",
+            "kota_asal": "Kab. Tana Toraja",
+            "foto": "CRUD_20220325152151.jpg",
+            "deskripsi": "cnska"
+        },
+        {
+            "id_tari": "16",
+            "nama_tari": "Tari Manimbong",
+            "kota_asal": "Kab. Tana Toraja",
+            "foto": "CRUD_20220625181446.jpg",
+            "deskripsi": "Tari Manimbong ini biasa dipertunjukkan di acara adat yang berhubungan dengan acara syukuran, atau acara pernikahan, syukuran panen, dan peresmian rumah adat (Tongkonan) yang baru, atau yang selesai direnovasi dan menghadirkan semua rumpun keluarga.Dari sini, ikatan kekeluargaan di Tana Toraja terjalin erat. Gerakan pada tarian ini diiringi oleh syair lagu khusus. Tarian Manimbong biasa dikombinasikan dengan tarian lain seperti tari Maâ€™dandan dengan gerakan yang diiringi oleh irama yang sama. Pada tarian ini, penari pria dan wanita saling bertukaran tempat ke depan dan ke belakang, berdiri dan berlutut, dengan diiringi sentakan gerakan-gerakan kaki.  "
+        },
+        {
+            "id_tari": "17",
+            "nama_tari": "Tari Gandrang Bulo",
+            "kota_asal": "Kota Makassar",
+            "foto": "CRUD_20220625181740.jpg",
+            "deskripsi": "Kata Gandrang memiliki arti tabuhan atau gendang. Sedangkan kata Bulo memiliki arti bambu. Sehingga Tari Gandrang Bulo secara harfiah memiliki arti tarian yang diiringi oleh tabuhan gendang dan bambu sebagai instrumen utama. Tarian ini juga bisa disebut dengan Gandrang Bulo Ilolo Gading, di mana lolo gading merupakan jenis bambu yang biasa digunakan sebagai alat musik di tarian ini. Masyarakat setempat juga menyebut jenis bambu ini dengan nama bulo batti.\n\nDisebut-sebut Tari Gandrang Bulo telah muncul sejak zaman raja-raja Gowa. Pada masa tersebut, tarian ini disebut juga dengan Tari Gandrang Bulo klasik. "
+        }
+    ]
+}
+                </code></pre>
+            <p>
+                To get characters you need to make a <strong>GET</strong> call to the following url :<br>
+                <P>Search by word :
+                <code class="higlighted break-word">http://localhost/budaya/API/search.php?q=[Searched Word]&cat=[Category]</code>
+                <br>
+            </p>
+            <br>
+            <pre><code class="json">
+
+                </code></pre>
+            <h4>QUERY PARAMETERS</h4>
+            <table class="central-overflow-x">
+                <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>q</td>
+                    <td>String</td>
+                    <td>(optional) A search word to find character by name.</td>
+                </tr>
+                <tr>
+                    <td>cat</td>
+                    <td>String</td>
+                    <td>Category (makanan, tari, pakaian, rumah).</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <h4>QUERY HEADERS</h4>
+            <table class="central-overflow-x">
+                <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>key</td>
+                    <td>String</td>
+                    <td>Your API key.</td>
+                </tr>
+                </tbody>
+            </table>
+              <pre class="shadow-lg rounded"><code class="json hljs">
+    
+      </code></pre>
+        </div>
+        <div class="overflow-hidden content-section" id="content-get-alldata">
+            <h2>GET ALL DATA</h2>
+            <pre><code class="bash">
+
+    # Get all data using key and cat as parameters. For example cat=tari. Here's the result for respond
+    {
+        tari{
+            "status": {
+                "code": 200,
+                "decription": "Request Valid"
+            },
+            "results": [
+                {
+                    "id_tari": "10",
+                    "nama_tari": "Tari Kipas Pakarena",
+                    "kota_asal": "Kabupaten Gowa",
+                    "foto": "CRUD_20220826205934.jpg",
+                    "deskripsi": "Menurut bahasa dari daerah setempat kata â€œPakarenaâ€ berasal dari kata â€œkarenaâ€ yang mempunyai makna yaitu â€œmainâ€. Tarian ini sendiri telah dijadikan sebagai tarian daerah oleh masyarakat daerah Gowa yang dahulunya adalah bekas dari Kerajaan Gowa. Tari Kipas Pakarena ini dimainkan oleh penari wanita berjumlah 5 sampai 7 orang, dengan memakai pakaian adat dan membawa sebuah kipas. Serta diiringi oleh alat musik yang dinamakan Gondrong Rinci. Alat musik itu merupakan perpaduan alunan antara alat musik seruling dengan alat musik geundrang. "
+                },
+                {
+                    "id_tari": "11",
+                    "nama_tari": "Tari Pagellu",
+                    "kota_asal": "Kab. Tana Toraja",
+                    "foto": "CRUD_20220625180010.jpg",
+                    "deskripsi": "Tari paâ€™gelluÂ atau terkenal dengan sebutanÂ paâ€™gellu pangalaÂ ini pertama kali diciptakan oleh Nek Datu Buaâ€™, yakni pada saat kembali dari medan peperangan yang kemudian dirayakan dengan menari penuh sukacita. Pada waktu itu belum ada alat musikÂ Â gendangÂ sehingga mereka menggunakanÂ lesungÂ sebagai pengiring tarian. Dalam tarianÂ paâ€™gelluÂ tidak ada batasan jumlah penari dan baik perempuan maupun laki-laki dapat mengikuti tarian ini.Â Tari paâ€™gelluÂ biasanya dimeriahkan pada saat dan upacaraÂ rambu tukaÂ (upacaraÂ kegembiraan), penyambutan tamu, pesta pernikahan, danÂ maâ€™buaÂ (upacaraÂ peresmian rumahÂ Tongkonan)."
+                }, [...]
+              </code></pre>
+              <p>
+                To get characters you need to make a <strong>GET</strong> call to the following url :<br>
+                <P>Get all data :
+                <code class="higlighted break-word">http://localhost/budaya/API/getall.php?key=[API Key]&cat=[Category]</code>
+                <br>
+                <pre><code class="json">
+            </p>
+             </code></pre>
+            <h4>QUERY PARAMETERS</h4>
+            <table class="central-overflow-x">
+                <thead>
+                    <tr>
+                        <th>Field</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>key</td>
+                        <td>String</td>
+                        <td>Your API key.</td>
+                    </tr>
+                    <tr>
+                        <td>cat</td>
+                        <td>String</td>
+                        <td>Category (makanan, tari, pakaian, rumah).</td>
+                    </tr>
+                </tbody>
+            </table>
+              <pre class="shadow-lg rounded"><code class="json hljs">
+      </code></pre>
+        </div>
+        <div class="overflow-hidden content-section" id="content-errors">
+            <h2>Code</h2>
+             <pre><code class="bash">
+
+#penerapan jika method yang digunakan tidak benar 
+{
+    "status": {
+    "code": 200,
+    "decription": "Request Valid"
+    }       
+}
+
+#penerapan jika parameter yang digunakan tidak benar
+{
+    "status": {
+        "code": 300,
+        "decription": "Parameter InValid"
+    }
+}
+#penerapan jika api key yang digunakan tidak benar
+{
+    "status": {
+        "code": 400,
+        "decription": "Api Key/Token Not Valid"
+    }
+}
+
+             </code></pre>
+
+            <p>
+                The Westeros API uses the following error codes:
+            </p>
+            <table>
+                <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Meaning</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>200</td>
+                    <td>
+                       Request Valid
+                    </td>
+                </tr>
+                <tr>
+                    <td>300</td>
+                    <td>Parameter Invalid 
+                    </td>
+                </tr>
+                <tr>
+                    <td>400</td>
+                    <td>
+                        Api Key/Token Not Valid <code class="higlighted">secret_key</code> This error appears if you use an unknow API key or if your API key expired.
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="content-code"></div>
+</div>
+<script src="js/script.js"></script>
+<script>
+    $(".dropdown-item").click(function(){
+        var link = this.getAttribute("href");
+        window.location.href = link
+    });
+</script>
+</body>
+</html>
